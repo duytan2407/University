@@ -132,8 +132,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer.cs" />
@@ -144,11 +146,23 @@
     <Compile Include="Migrations\202107060553460_InitialCreate.Designer.cs">
       <DependentUpon>202107060553460_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107060612597_ColumnFirstName.cs" />
+    <Compile Include="Migrations\202107060612597_ColumnFirstName.Designer.cs">
+      <DependentUpon>202107060612597_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107060701144_ComplexDataModel.cs" />
+    <Compile Include="Migrations\202107060701144_ComplexDataModel.Designer.cs">
+      <DependentUpon>202107060701144_ComplexDataModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -197,6 +211,17 @@
     <Content Include="Views\Enrollments\Details.cshtml" />
     <Content Include="Views\Enrollments\Edit.cshtml" />
     <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Instructors\Create.cshtml" />
+    <Content Include="Views\Instructors\Delete.cshtml" />
+    <Content Include="Views\Instructors\Details.cshtml" />
+    <Content Include="Views\Instructors\Edit.cshtml" />
+    <Content Include="Views\Instructors\Index.cshtml" />
+    <Content Include="Views\Instructor\Create.cshtml" />
+    <Content Include="Views\Instructor\Delete.cshtml" />
+    <Content Include="Views\Instructor\Details.cshtml" />
+    <Content Include="Views\Instructor\Edit.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -217,6 +242,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202107060553460_InitialCreate.resx">
       <DependentUpon>202107060553460_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107060612597_ColumnFirstName.resx">
+      <DependentUpon>202107060612597_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107060701144_ComplexDataModel.resx">
+      <DependentUpon>202107060701144_ComplexDataModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
